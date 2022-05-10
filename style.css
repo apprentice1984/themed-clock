@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 5rem;
+  transition: 0.3s ease-in-out;
+}
+
+body.dark-active {
+  background-color: #000;
+  color: white;
+}
+
+body.dark-active .line-1,
+body.dark-active .line-3 {
+  background-color: #fff;
+}
+
+body.dark-active button {
+  background-color: #fff;
+  color: black;
+}
+
+button {
+  position: fixed;
+  top: 50px;
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.dayOfWeek {
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #33333390;
+  padding: 20px;
+}
+body.dark-active .clocks {
+  background-color: rgba(248, 248, 248, 0.1);
+}
+
+body.dark-active .dayOfWeek {
+  color: #fff;
+}
+
+body.dark-active .date-number {
+  background-color: white;
+  color: black;
+}
+
+.date-number {
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border-radius: 100%;
+  letter-spacing: 2px;
+}
+
+.clocks {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: rgba(172, 129, 129, 0.067);
+}
+
+.line {
+  position: absolute;
+  width: 1.5%;
+  left: 50%;
+  transform-origin: center bottom;
+  transition: 0.3s ease;
+}
+
+.line-1 {
+  height: 47%;
+  margin-top: 3%;
+  background-color: black;
+}
+
+.line-2 {
+  height: 47%;
+  margin-top: 3%;
+  background-color: red;
+}
+
+.line-3 {
+  height: 25%;
+  margin-top: 25%;
+  background-color: black;
+  transform: rotate(280deg);
+}
